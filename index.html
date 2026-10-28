@@ -5,45 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Music Capital of India</title>
 <style>
-  body { font-family: 'Arial Black', Impact, sans-serif; line-height: 1.5; color: #000; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #ffea00; }
-  p, li, .quote-block, td { font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 1.1em; }
+  /* Professional Base */
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #fcfcfc; }
   
-  .header { text-align: center; padding: 30px; background: #ff007f; color: #fff; border: 4px solid #000; box-shadow: 10px 10px 0px #000; margin-bottom: 40px; transform: rotate(-1deg); }
-  .header h1 { font-size: 3.5em; margin: 0; text-transform: uppercase; letter-spacing: 2px; text-shadow: 4px 4px 0px #00ffff; }
-  .author-bio { background: #000; color: #00ffff; display: inline-block; padding: 5px 15px; margin-top: 15px; font-family: 'Courier New', monospace; text-transform: uppercase; }
+  /* Elegant Header with Pop-Punk Accent (Magenta/Cyan thin lines) */
+  .header { text-align: center; padding: 40px 20px; background: #fff; border-top: 6px solid #ff007f; border-bottom: 2px solid #eaeaea; margin-bottom: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+  .header h1 { font-family: 'Georgia', serif; font-size: 3.2em; margin: 0; color: #111; letter-spacing: 1px; }
+  .author-bio { font-size: 0.9em; color: #666; margin-top: 15px; text-transform: uppercase; letter-spacing: 1.5px; }
+  .author-bio span { color: #00cccc; font-weight: bold; }
   
-  .hero-image { width: 100%; border: 4px solid #000; box-shadow: 10px 10px 0px #000; margin-bottom: 30px; }
+  .hero-image { width: 100%; height: auto; border-radius: 4px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
   
-  .quote-block { background: #00ffff; border: 4px dashed #000; padding: 20px; margin: 30px 0; font-size: 1.2em; box-shadow: 8px 8px 0px #ff007f; transform: rotate(1deg); }
+  /* Pop-Punk Accent on Quote */
+  .quote-block { background: #fff; border-left: 4px solid #ff007f; padding: 25px 30px; margin: 40px 0; font-family: 'Georgia', serif; font-style: italic; font-size: 1.3em; color: #222; box-shadow: 4px 4px 0px rgba(0, 204, 204, 0.15); }
   
-  .section-title { background: #000; color: #00ffff; padding: 10px 20px; display: inline-block; text-transform: uppercase; border: 4px solid #ff007f; box-shadow: 6px 6px 0px #00ffff; margin-top: 40px; font-size: 2em; }
+  .section-title { font-family: 'Georgia', serif; color: #111; border-bottom: 2px solid #00cccc; padding-bottom: 10px; margin-top: 50px; font-size: 2em; }
   
-  .artist-grid { display: flex; flex-wrap: wrap; gap: 30px; margin: 30px 0; }
-  .artist-card { flex: 1 1 calc(50% - 30px); background: #fff; padding: 15px; border: 4px solid #000; box-shadow: 8px 8px 0px #ff007f; }
-  .artist-card img { width: 100%; height: 250px; object-fit: cover; border: 2px solid #000; margin-bottom: 10px; filter: contrast(1.2) saturate(1.5); }
+  h3 { color: #222; font-size: 1.3em; margin-top: 30px; border-left: 3px solid #ff007f; padding-left: 10px; }
   
-  .media-container { background: #fff; padding: 20px; border: 4px solid #000; margin: 30px 0; box-shadow: 10px 10px 0px #00ffff; }
-  .media-container h4 { font-family: 'Arial Black', sans-serif; text-transform: uppercase; font-size: 1.2em; background: #ff007f; color: #fff; padding: 5px; display: inline-block; }
-  audio, iframe { width: 100%; border: 4px solid #000; margin-top: 10px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 10px; }
   
-  .timeline-box { background: #000; color: #fff; padding: 25px; border: 4px solid #00ffff; box-shadow: 10px 10px 0px #ff007f; margin: 40px 0; text-align: center; }
-  .timeline-box h3 { color: #ffea00; font-size: 2em; text-transform: uppercase; margin-top: 0; }
-  .timeline-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; color: #000; }
-  .timeline-table th, .timeline-table td { padding: 15px; border: 3px solid #000; text-align: left; }
-  .timeline-table th { background: #ff007f; color: #fff; text-transform: uppercase; font-family: 'Arial Black', sans-serif; }
+  /* Clean Cards with Subtle Edge */
+  .artist-grid { display: flex; flex-wrap: wrap; gap: 25px; margin: 40px 0; }
+  .artist-card { flex: 1 1 calc(50% - 25px); background: #fff; padding: 20px; border: 1px solid #eaeaea; border-radius: 4px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .artist-card:hover { transform: translateY(-3px); box-shadow: 6px 6px 0px rgba(255, 0, 127, 0.1); }
+  .artist-card img { width: 100%; height: 260px; object-fit: cover; border-radius: 2px; margin-bottom: 15px; }
   
-  .footer { margin-top: 60px; padding: 20px; background: #000; color: #ffea00; text-align: center; font-family: 'Courier New', monospace; font-weight: bold; border: 4px solid #ff007f; }
+  .media-container { background: #fff; padding: 30px; border: 1px solid #eaeaea; margin: 40px 0; border-radius: 4px; border-top: 3px solid #00cccc; }
+  .media-container h4 { margin-top: 0; font-size: 1.1em; text-transform: uppercase; letter-spacing: 1px; color: #555; }
+  audio, iframe { width: 100%; margin-top: 15px; border-radius: 4px; }
+  
+  /* Elegant Timeline */
+  .timeline-box { background: #fff; padding: 30px; border: 1px solid #eaeaea; margin: 50px 0; border-radius: 4px; }
+  .timeline-box h3 { border-left: none; padding-left: 0; text-align: center; margin-top: 0; color: #111; }
+  .timeline-table { width: 100%; border-collapse: collapse; margin-top: 25px; }
+  .timeline-table th, .timeline-table td { padding: 15px; border-bottom: 1px solid #eaeaea; text-align: left; }
+  .timeline-table th { color: #666; text-transform: uppercase; font-size: 0.85em; letter-spacing: 1px; }
+  .timeline-table td:first-child { font-weight: bold; color: #ff007f; }
+  
+  .footer { margin-top: 70px; padding: 30px; border-top: 1px solid #eaeaea; text-align: center; color: #888; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
 
+  /* Mobile Optimization */
   @media (max-width: 768px) {
-    .header h1 { font-size: 2.2em; text-shadow: 2px 2px 0px #00ffff; }
-    .section-title { font-size: 1.5em; }
+    .header h1 { font-size: 2.2em; }
     .artist-grid { flex-direction: column; }
     .artist-card { flex: 1 1 100%; }
+    .quote-block { font-size: 1.1em; padding: 20px; }
     .timeline-table, .timeline-table tbody, .timeline-table tr, .timeline-table th, .timeline-table td { display: block; width: 100%; box-sizing: border-box; }
-    .timeline-table tr { margin-bottom: 15px; border-bottom: 4px solid #000; }
     .timeline-table th { display: none; }
-    .timeline-table td { text-align: center; border: 2px solid #000; border-top: none; }
-    .timeline-table td:first-child { background: #ff007f; color: #fff; border-top: 2px solid #000; font-family: 'Arial Black', sans-serif; font-size: 1.2em; }
+    .timeline-table td { text-align: right; padding: 10px; border-bottom: none; }
+    .timeline-table td:first-child { text-align: left; border-top: 1px solid #eaeaea; margin-top: 10px; padding-top: 15px; }
+    .timeline-table tr { border-bottom: 1px solid #eaeaea; padding-bottom: 10px; }
   }
 </style>
 </head>
@@ -51,7 +64,7 @@
 
 <div class="header">
   <h1>The Music Capital of India</h1>
-  <div class="author-bio">By Matthew S Dkhar Sawian</div>
+  <div class="author-bio">By Matthew S Dkhar Sawian <span>//</span> 24BJMC20</div>
 </div>
 
 <img class="hero-image" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Massive crowd at a live outdoor music concert in Shillong">
@@ -59,15 +72,15 @@
 <p>Every time I book a WizzRide shuttle from Guwahati and wind my way up into the East Khasi Hills, the shift in the atmosphere is palpable. The clouds descend, the air cools, and you can practically hear a guitar riff echoing through the pines. Having produced media campaigns and music videos, I've spent hours analyzing what makes a live performance connect with an audience. But you don't need a producer's eye to see what's happening in Meghalaya. You just have to listen.</p>
 
 <div class="quote-block">
-  "THE MUSIC IN SHILLONG IS NOT BACKGROUND. IT IS INFRASTRUCTURE. SHILLONG HAPPENED BECAUSE OF INTENTION."
+  "The music in Shillong is not background. It is infrastructure. A city with this much active music culture does not happen by accident. Shillong happened because of intention."
 </div>
 
-<p>Shillong isn't just a hill station; it is a global stage. Whether you are hopping in a Rapido to catch a local jam session, or standing shoulder-to-shoulder with thousands at the Cherry Blossom Festival, live music is the undisputed heartbeat of this city.</p>
+<p>Shillong isn't just a hill station; it is a global stage. The sheer gravity of the music scene here pulls artists from every corner of the planet. Whether you are hopping in a Rapido to catch a local jam session in a neighborhood cafe, or standing shoulder-to-shoulder with thousands at the Cherry Blossom Festival, live music is the undisputed heartbeat of this city.</p>
 
 <h2 class="section-title">Who Came to the Hills?</h2>
 
 <div class="timeline-box">
-  <h3>Shillong's Mega Concert Timeline</h3>
+  <h3 style="border:none; text-align:center;">Shillong's Mega Concert Timeline</h3>
   <table class="timeline-table">
     <tr><th>Year</th><th>Headlining Artists</th><th>Festival / Event</th></tr>
     <tr><td>2015</td><td>Megadeth, The Wailers</td><td>NH7 Weekender</td></tr>
@@ -82,34 +95,34 @@
 
 <h3>The Hometown Heroes (5)</h3>
 <ul>
-  <li>Soulmate: Asia's premier blues-rock export.</li>
-  <li>Lou Majaw: The undisputed legend keeping Bob Dylan's spirit alive.</li>
-  <li>Snow White: Perfecting the fusion of heavy rock with traditional Khasi lyricism.</li>
-  <li>Khasi Bloodz: Established Shillong as a serious hip-hop stronghold.</li>
-  <li>Summersalt: Masters of blending folk instrumentation with modern cinematic arrangements.</li>
+  <li><strong>Soulmate:</strong> Asia's premier blues-rock export, born and raised right here.</li>
+  <li><strong>Lou Majaw:</strong> The undisputed legend, keeping Bob Dylan's spirit alive on the streets.</li>
+  <li><strong>Snow White:</strong> Perfecting the fusion of heavy rock with traditional Khasi lyricism.</li>
+  <li><strong>Khasi Bloodz:</strong> The crew that established Shillong as a serious hip-hop stronghold.</li>
+  <li><strong>Summersalt:</strong> Masters of blending folk instrumentation with modern cinematic arrangements.</li>
 </ul>
 
 <h3>The Indian Heavyweights (5)</h3>
 <ul>
-  <li>Papon: A massive crowd-puller bridging regional folk and contemporary anthems.</li>
-  <li>Nucleya: Bringing ground-shaking bass music to the high altitudes.</li>
-  <li>Indian Ocean: Delivering deeply spiritual fusion-rock sets.</li>
-  <li>Amit Trivedi: Turning the polo grounds into a massive Bollywood-electronic carnival.</li>
-  <li>Dualist Inquiry: Driving the indie-electronic scene with brilliant guitar-synth loops.</li>
+  <li><strong>Papon:</strong> A massive crowd-puller bridging regional folk and contemporary anthems.</li>
+  <li><strong>Nucleya:</strong> Bringing ground-shaking bass music to the high altitudes.</li>
+  <li><strong>Indian Ocean:</strong> Delivering deeply spiritual fusion-rock sets as the sun sets over the hills.</li>
+  <li><strong>Amit Trivedi:</strong> Turning the polo grounds into a massive Bollywood-electronic carnival.</li>
+  <li><strong>Dualist Inquiry:</strong> Driving the indie-electronic scene with brilliant guitar-synth loops.</li>
 </ul>
 
 <h3>The International Icons (10)</h3>
 <ul>
-  <li>Ed Sheeran: Taking the city by storm in 2025 playing to an absolute sea of fans.</li>
-  <li>Megadeth: Setting the gold standard for heavy metal in the Northeast.</li>
-  <li>Lucas: The K-pop superstar who brought unprecedented hysteria.</li>
-  <li>Akon: Packing the festival grounds with classic R&B stadium energy.</li>
-  <li>Boney M: Bringing their historic farewell disco tour straight to Meghalaya.</li>
-  <li>Eric Martin (Mr. Big): Cementing the city's love affair with classic 80s/90s rock.</li>
-  <li>Scorpions: Hard rock legends delivering soaring guitar solos.</li>
-  <li>Ne-Yo: Providing the perfect smooth R&B soundtrack under the November skies.</li>
-  <li>Bryan Adams: A monumental classic act that proved Shillong's pulling power early on.</li>
-  <li>Firehouse: The kings of the rock ballad, deeply revered by local guitarists.</li>
+  <li><strong>Ed Sheeran:</strong> Taking the city by storm in 2025 playing to an absolute sea of fans.</li>
+  <li><strong>Megadeth:</strong> Setting the gold standard for heavy metal in the Northeast at NH7 Weekender.</li>
+  <li><strong>Lucas:</strong> The K-pop superstar who brought unprecedented hysteria to the Cherry Blossom Festival.</li>
+  <li><strong>Akon:</strong> Packing the festival grounds with classic R&B stadium energy.</li>
+  <li><strong>Boney M:</strong> Bringing their historic farewell disco tour straight to Meghalaya.</li>
+  <li><strong>Eric Martin (Mr. Big):</strong> Cementing the city's love affair with classic 80s/90s rock.</li>
+  <li><strong>Scorpions:</strong> Hard rock legends delivering an unforgettable night of soaring guitar solos.</li>
+  <li><strong>Ne-Yo:</strong> Providing the perfect smooth R&B soundtrack under the November skies.</li>
+  <li><strong>Bryan Adams:</strong> A monumental classic act that proved Shillong's pulling power early on.</li>
+  <li><strong>Firehouse:</strong> The kings of the rock ballad, deeply revered by local guitarists.</li>
 </ul>
 
 <h2 class="section-title">Visualizing the Energy</h2>
@@ -128,7 +141,7 @@
   </div>
   <div class="artist-card">
     <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Massive concert crowd with lights">
-    <p>The Shillong Crowd: The real reason artists keep coming back. The energy here is insane.</p>
+    <p>The Shillong Crowd: The real reason artists keep coming back. The energy here is something you have to feel to believe.</p>
   </div>
 </div>
 
@@ -157,7 +170,7 @@
 </div>
 
 <div class="footer">
-  COPYRIGHT 2026 MATTHEW S DKHAR SAWIAN | 24BJMC20
+  &copy; 2026 Matthew S Dkhar Sawian | Visual Communication Media Project
 </div>
 
 </body>
