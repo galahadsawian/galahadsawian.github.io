@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; }
   .header { text-align: center; padding-bottom: 20px; border-bottom: 2px solid #ececec; margin-bottom: 30px; }
@@ -36,6 +37,18 @@
   .frutiger-table th, .frutiger-table td { padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.2); text-align: left; }
   .frutiger-table th { background: rgba(255,255,255,0.15); font-weight: bold; text-transform: uppercase; }
   .footer { margin-top: 50px; padding-top: 20px; border-top: 2px solid #ececec; text-align: center; color: #777; font-size: 0.9em; }
+  /* Mobile Responsive Rules */
+  @media (max-width: 768px) {
+    .header h1 { font-size: 2em; }
+    .artist-grid { flex-direction: column; }
+    .artist-card { flex: 1 1 100%; }
+    .frutiger-infographic { padding: 15px; }
+    /* Makes the table stack neatly on phones */
+    .frutiger-table, .frutiger-table tbody, .frutiger-table tr, .frutiger-table th, .frutiger-table td { display: block; width: 100%; box-sizing: border-box; }
+    .frutiger-table tr { margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.3); }
+    .frutiger-table th { display: none; }
+    .frutiger-table td { text-align: center; }
+  }
 </style>
 </head>
 <body>
