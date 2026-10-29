@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Shillong_Archives.exe // Matthew S Dkhar Sawian</title>
 <style>
-  /* Windows XP New Age Nostalgia + Cyber Sigil Aesthetic */
   :root {
     --xp-blue-dark: #003399;
     --xp-blue-mid: #0055ea;
@@ -14,7 +13,6 @@
     --xp-window-bg: #f5f4f0;
     --xp-border-light: #ffffff;
     --xp-border-dark: #808080;
-    --xp-border-deep: #404040;
     --xp-green-start: linear-gradient(180deg, #46b035 0%, #2d891e 50%, #1d6412 100%);
     --xp-title-bar: linear-gradient(180deg, #0997ff 0%, #0053ee 8%, #0050ee 40%, #06f 88%, #003dd9 93%, #003399 100%);
     --xp-silver-bar: linear-gradient(180deg, #f8f9fa 0%, #cfd4dc 45%, #b2b9c4 50%, #d8dde6 100%);
@@ -26,120 +24,124 @@
 
   body {
     font-family: 'Tahoma', 'Trebuchet MS', 'Segoe UI', sans-serif;
-    line-height: 1.75;
+    line-height: 1.7;
     color: var(--text-dark);
     margin: 0;
-    padding: 25px 15px 70px 15px;
-    /* Nostalgic XP Bliss Sky & Digital Cyber Grid Background */
+    padding: 10px 6px 60px 6px;
     background-color: #1b2838;
     background-image: 
       radial-gradient(circle at 20% 20%, rgba(120, 180, 255, 0.25) 0%, transparent 45%),
-      radial-gradient(circle at 80% 75%, rgba(180, 210, 255, 0.2) 0%, transparent 50%),
       linear-gradient(180deg, #1d3b66 0%, #3a6ea5 48%, #57886c 78%, #27422d 100%);
     background-attachment: fixed;
+    overflow-x: hidden;
   }
 
-  /* Main Desktop Container */
   .desktop-wrapper {
-    max-width: 940px;
+    max-width: 920px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
   }
 
   /* Windows XP Classic Window Frame */
   .xp-window {
     background: var(--xp-window-bg);
-    border: 3px solid #0055ea;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), inset 0 0 0 1px #fff;
-    margin-bottom: 35px;
+    border: 2px solid #0055ea;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
     overflow: hidden;
+    width: 100%;
   }
 
-  /* Glossy XP Title Bar */
   .xp-titlebar {
     background: var(--xp-title-bar);
     color: #ffffff;
-    padding: 7px 12px;
+    padding: 6px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 0.95em;
+    font-size: 0.85em;
     letter-spacing: 0.5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     user-select: none;
+    overflow: hidden;
   }
 
   .xp-title-left {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .xp-controls {
     display: flex;
-    gap: 4px;
+    gap: 3px;
+    flex-shrink: 0;
   }
 
   .xp-ctrl-btn {
-    width: 21px;
-    height: 21px;
+    width: 18px;
+    height: 18px;
     border: 1px solid #fff;
-    border-radius: 3px;
+    border-radius: 2px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: 'Tahoma', sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #fff;
     background: linear-gradient(180deg, #5c9aff 0%, #0050ee 100%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
   }
 
   .xp-ctrl-close {
     background: linear-gradient(180deg, #f28a72 0%, #e0431c 50%, #b82500 100%);
   }
 
-  /* XP Menu & Address Bar */
   .xp-menubar {
     background: var(--xp-silver-bg);
     border-bottom: 1px solid #d4d0c8;
-    padding: 5px 12px;
-    font-size: 0.82em;
+    padding: 4px 10px;
+    font-size: 0.78em;
     color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 6px;
   }
 
   .xp-address-bar {
     background: #ffffff;
     border: 1px solid #7f9db9;
-    padding: 3px 10px;
+    padding: 2px 8px;
     font-family: 'Courier New', monospace;
-    font-size: 0.9em;
+    font-size: 0.82em;
     color: #003399;
-    flex-grow: 1;
-    max-width: 520px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  /* Window Interior Content */
   .xp-content {
-    padding: 30px;
+    padding: 18px 12px;
     background: linear-gradient(180deg, #ffffff 0%, #f4f3ee 100%);
     position: relative;
+    width: 100%;
+    overflow: hidden;
   }
 
-  /* Cyber Sigil SVG Dividers (Sharp Gothic Tribal Line Art) */
   .cybersigil-art {
     width: 100%;
-    height: 55px;
-    margin: 35px 0;
+    height: 45px;
+    margin: 25px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,18 +149,16 @@
   }
 
   .cybersigil-art svg {
-    width: 340px;
-    height: 50px;
+    width: 260px;
+    height: 40px;
     stroke: #1a1d24;
     fill: none;
-    filter: drop-shadow(0 2px 3px rgba(0, 85, 234, 0.2));
   }
 
-  /* Hero Header Banner */
   .hero-banner {
     background: linear-gradient(135deg, #0b111e 0%, #1c2b4b 50%, #0d1322 100%);
     color: #fff;
-    padding: 35px 25px;
+    padding: 25px 15px;
     border: 2px inset #808080;
     text-align: center;
     position: relative;
@@ -166,118 +166,108 @@
   }
 
   .hero-banner h1 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 2.6em;
+    font-family: 'Georgia', serif;
+    font-size: 1.8em;
     font-weight: normal;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin: 10px 0;
+    margin: 8px 0;
     background: linear-gradient(180deg, #ffffff 0%, #b8d0ff 50%, #7aa7ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-break: break-word;
   }
 
   .author-badge {
     font-family: 'Courier New', monospace;
-    font-size: 0.86em;
+    font-size: 0.75em;
     color: #c4d7ff;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 8px;
+    margin-top: 6px;
+    line-height: 1.5;
   }
 
-  /* XP Metallic Tab Navigation */
   .xp-tabs {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 18px;
     flex-wrap: wrap;
   }
 
   .xp-tab-btn {
     background: var(--xp-silver-bar);
     color: #111;
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #555555;
-    border-bottom: 2px solid #555555;
-    padding: 10px 24px;
+    border: 2px solid #555;
+    padding: 8px 14px;
     font-family: 'Tahoma', sans-serif;
     font-weight: bold;
-    font-size: 0.9em;
-    letter-spacing: 1px;
+    font-size: 0.78em;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.15s ease;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 280px;
   }
 
-  .xp-tab-btn.active, .xp-tab-btn:hover {
+  .xp-tab-btn.active {
     background: linear-gradient(180deg, #3b8cf5 0%, #0055ea 50%, #003399 100%);
     color: #ffffff;
     border-color: #99c2ff #002266 #002266 #99c2ff;
-    box-shadow: 0 0 12px rgba(59, 140, 245, 0.6);
   }
 
-  /* Blog Sections */
   .blog-section { display: none; }
   .blog-section.active { display: block; }
 
-  /* Sub-Window Section Headers */
   .section-bar {
     background: var(--xp-silver-bar);
     border: 1px solid #8c96a6;
-    border-left: 5px solid var(--xp-blue-mid);
-    padding: 10px 16px;
-    margin: 40px 0 22px 0;
+    border-left: 4px solid var(--xp-blue-mid);
+    padding: 8px 12px;
+    margin: 30px 0 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: inset 0 1px 0 #fff, 0 2px 5px rgba(0,0,0,0.06);
+    flex-wrap: wrap;
+    gap: 5px;
   }
 
   .section-bar h2 {
     font-family: 'Georgia', serif;
-    font-size: 1.45em;
+    font-size: 1.15em;
     margin: 0;
     color: #0d1b3e;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
+    word-break: break-word;
   }
 
   .section-bar span {
     font-family: 'Courier New', monospace;
-    font-size: 0.78em;
+    font-size: 0.7em;
     color: #334e85;
     font-weight: bold;
-    letter-spacing: 2px;
   }
 
-  /* Readable Editorial Prose */
   .prose {
-    font-size: 1.06em;
+    font-size: 0.98em;
     color: #1c2026;
-    text-align: justify;
-    margin: 22px 0;
+    text-align: left;
+    margin: 16px 0;
   }
-  .prose p { margin-bottom: 20px; }
+  .prose p { margin-bottom: 16px; }
 
-  /* Beveled Image Frames */
   .xp-frame {
     background: var(--xp-silver-bg);
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #808080;
-    border-bottom: 2px solid #808080;
-    padding: 10px;
-    margin: 25px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border: 2px inset #808080;
+    padding: 6px;
+    margin: 20px 0;
   }
 
   .hero-img {
     width: 100%;
-    height: 430px;
+    height: 240px;
     object-fit: cover;
     border: 1px inset #808080;
     display: block;
@@ -285,102 +275,97 @@
 
   .caption-credit {
     font-family: 'Courier New', monospace;
-    font-size: 0.78em;
+    font-size: 0.7em;
     color: #3b4252;
     background: #e4e1d0;
-    padding: 6px 10px;
-    margin-top: 8px;
+    padding: 5px 8px;
+    margin-top: 6px;
     border: 1px solid #c4c0b0;
     text-align: right;
-    letter-spacing: 0.5px;
+    word-break: break-all;
   }
 
-  /* Artist Quote Dialog Cards */
   .artist-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
-    margin: 30px 0;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 20px 0;
   }
 
   .artist-dialog {
     background: var(--xp-silver-bg);
     border: 2px solid #0055ea;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     overflow: hidden;
   }
 
   .artist-dialog-header {
     background: var(--xp-title-bar);
     color: #fff;
-    padding: 5px 10px;
-    font-size: 0.8em;
+    padding: 4px 8px;
+    font-size: 0.75em;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
   }
 
   .artist-dialog-body {
-    padding: 14px;
+    padding: 10px;
     background: #ffffff;
   }
 
   .artist-dialog-body img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
     object-position: top center;
     border: 2px inset #ccc;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .artist-quote {
     font-family: 'Georgia', serif;
     font-style: italic;
-    font-size: 0.96em;
+    font-size: 0.9em;
     color: #1a202c;
     background: #f0f4fa;
     border-left: 3px solid #0055ea;
-    padding: 10px 12px;
-    margin-bottom: 10px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
   }
 
   .artist-name {
     font-family: 'Courier New', monospace;
-    font-size: 0.78em;
+    font-size: 0.72em;
     font-weight: bold;
     color: #003399;
     text-align: right;
     text-transform: uppercase;
   }
 
-  /* 4 Photo Collage Grid */
   .collage-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .collage-img {
     width: 100%;
-    height: 275px;
+    height: 220px;
     object-fit: cover;
     border: 2px inset #808080;
     display: block;
   }
 
-  /* Video & Audio XP Media Player Boxes */
   .xp-media-player {
     background: var(--xp-silver-bg);
     border: 2px outset #ffffff;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    margin: 35px 0;
+    margin: 25px 0;
   }
 
   .xp-media-body {
-    padding: 20px;
+    padding: 12px;
     text-align: center;
     background: #181c24;
     color: #e2e8f0;
@@ -388,147 +373,136 @@
 
   .xp-media-body h3 {
     margin-top: 0;
+    font-size: 1.05em;
     color: #8ab4f8;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    word-break: break-word;
   }
 
   iframe {
     width: 100%;
-    height: 430px;
+    height: 220px;
     border: 2px inset #555;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
-  /* Infographic XP Data Panel */
   .infographic-panel {
     background: #ffffff;
     border: 2px inset #b0b5bc;
-    padding: 25px;
-    margin: 35px 0;
+    padding: 12px;
+    margin: 25px 0;
+    overflow-x: auto;
   }
 
   .xp-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 0 30px 0;
-    font-size: 0.94em;
+    margin: 10px 0 20px 0;
+    font-size: 0.82em;
+    min-width: 480px;
+  }
+
+  .xp-table th, .xp-table td {
+    padding: 8px 10px;
+    border: 1px solid #d0d7de;
+    text-align: left;
   }
 
   .xp-table th {
     background: var(--xp-silver-bar);
     color: #002266;
-    border: 1px solid #8c96a6;
-    padding: 10px 14px;
-    text-align: left;
-    font-family: 'Tahoma', sans-serif;
-    text-transform: uppercase;
-    font-size: 0.85em;
   }
-
-  .xp-table td {
-    padding: 12px 14px;
-    border: 1px solid #d0d7de;
-    color: #1c2026;
-  }
-
-  .xp-table tr:nth-child(even) { background: #f6f8fa; }
 
   .roster-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 20px;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 15px;
     border-top: 2px groove #d4d0c8;
-    padding-top: 22px;
+    padding-top: 15px;
   }
 
   .roster-col {
     background: #f8f9fb;
     border: 1px solid #cfd6e0;
-    padding: 15px;
+    padding: 12px;
   }
 
   .roster-col h4 {
     font-family: 'Tahoma', sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.88em;
+    font-size: 0.82em;
     color: #003399;
     border-bottom: 2px solid #0055ea;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     margin-top: 0;
   }
 
   .roster-col ol {
-    padding-left: 18px;
+    padding-left: 16px;
     margin: 0;
-    font-size: 0.9em;
-    color: #2d3748;
+    font-size: 0.85em;
   }
-  .roster-col li { margin-bottom: 7px; }
+  .roster-col li { margin-bottom: 6px; }
 
-  /* Interactive Synthesizer Audio Player */
   .cyber-audio-player {
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
-    justify-content: space-between;
     background: #0c1017;
     border: 2px inset #4a5568;
-    padding: 15px 20px;
-    margin-top: 15px;
+    padding: 12px;
+    margin-top: 12px;
+    text-align: center;
   }
 
   .audio-btn {
     background: var(--xp-silver-bar);
     color: #000;
     border: 2px outset #fff;
-    padding: 9px 20px;
+    padding: 8px 16px;
     font-family: 'Tahoma', sans-serif;
     font-weight: bold;
-    font-size: 0.85em;
+    font-size: 0.8em;
     text-transform: uppercase;
     cursor: pointer;
+    width: 100%;
   }
-
-  .audio-btn:active { border-style: inset; }
 
   .audio-status {
     font-family: 'Courier New', monospace;
-    font-size: 0.85em;
+    font-size: 0.72em;
     color: #68d391;
-    letter-spacing: 1px;
+    word-break: break-all;
   }
 
-  /* Sources Box */
   .sources-box {
     background: var(--xp-silver-bg);
     border: 2px groove #ffffff;
-    padding: 22px;
-    margin-top: 45px;
+    padding: 15px 10px;
+    margin-top: 30px;
   }
 
   .sources-box h3 {
     margin-top: 0;
-    font-size: 1.05em;
+    font-size: 0.95em;
     color: #003399;
-    text-transform: uppercase;
     border-bottom: 1px solid #999;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
   }
 
   .sources-box ul {
     list-style: none;
     padding: 0;
     font-family: 'Courier New', monospace;
-    font-size: 0.85em;
+    font-size: 0.75em;
   }
 
   .sources-box li {
-    margin-bottom: 9px;
-    padding-left: 18px;
+    margin-bottom: 8px;
+    padding-left: 14px;
     position: relative;
+    word-break: break-all;
   }
 
   .sources-box li::before {
@@ -542,7 +516,6 @@
     color: #003399;
     text-decoration: underline;
   }
-  .sources-box a:hover { color: #d9381e; }
 
   /* Windows XP Bottom Taskbar */
   .xp-taskbar {
@@ -550,17 +523,18 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 36px;
+    height: 32px;
     background: var(--xp-title-bar);
     border-top: 2px solid #3b8cf5;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 12px 0 0;
+    padding: 0 8px 0 0;
     z-index: 999;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
     color: #fff;
-    font-size: 0.82em;
+    font-size: 0.72em;
+    overflow: hidden;
   }
 
   .xp-start-btn {
@@ -568,41 +542,61 @@
     color: #fff;
     font-weight: bold;
     font-style: italic;
-    font-size: 1.05em;
+    font-size: 0.95em;
     height: 100%;
-    padding: 0 22px 0 14px;
-    border-top-right-radius: 14px;
-    border-bottom-right-radius: 14px;
-    border-right: 2px solid #14490c;
+    padding: 0 14px 0 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     display: flex;
     align-items: center;
-    gap: 6px;
-    box-shadow: inset 0 1px 1px rgba(255,255,255,0.6);
-    user-select: none;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .xp-taskbar-center {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 6px;
   }
 
   .xp-tray {
     background: linear-gradient(180deg, #1290e8 0%, #0d69b8 100%);
     height: 100%;
-    padding: 0 15px;
-    border-left: 1px solid #08447c;
+    padding: 0 8px;
     display: flex;
     align-items: center;
-    font-family: 'Tahoma', sans-serif;
-    letter-spacing: 0.5px;
+    flex-shrink: 0;
   }
 
-  /* Mobile & Tablet Responsive Adaptation */
-  @media (max-width: 768px) {
-    .xp-content { padding: 16px; }
-    .hero-banner h1 { font-size: 1.8em; }
-    .artist-grid, .collage-grid, .roster-grid { grid-template-columns: 1fr; }
-    .hero-img, iframe { height: 250px; }
-    .prose { text-align: left; }
-    .cyber-audio-player { flex-direction: column; gap: 12px; text-align: center; }
-    .xp-table, .xp-table tbody, .xp-table tr, .xp-table th, .xp-table td { display: block; width: 100%; }
-    .xp-table th { display: none; }
-    .xp-table tr { margin-bottom: 12px; border: 1px solid #8c96a6; }
+  /* Desktop and Tablet Enhancements (min-width: 768px) */
+  @media (min-width: 768px) {
+    body { padding: 25px 15px 70px 15px; }
+    .xp-content { padding: 30px; }
+    .hero-banner { padding: 35px 25px; }
+    .hero-banner h1 { font-size: 2.6em; }
+    .author-badge { font-size: 0.86em; }
+    .xp-tab-btn { width: auto; font-size: 0.9em; padding: 10px 24px; }
+    .section-bar h2 { font-size: 1.45em; }
+    .hero-img { height: 430px; }
+    .caption-credit { font-size: 0.78em; }
+    .artist-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+    .artist-dialog-body img { height: 250px; }
+    .collage-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .collage-img { height: 275px; }
+    iframe { height: 430px; }
+    .infographic-panel { padding: 25px; }
+    .xp-table { font-size: 0.94em; min-width: 100%; }
+    .roster-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .cyber-audio-player { flex-direction: row; justify-content: space-between; text-align: left; padding: 15px 20px; }
+    .audio-btn { width: auto; }
+    .audio-status { font-size: 0.85em; }
+    .sources-box { padding: 22px; }
+    .sources-box ul { font-size: 0.85em; }
+    .sources-box li { word-break: normal; }
+    .xp-taskbar { font-size: 0.82em; padding: 0 12px 0 0; }
   }
 </style>
 </head>
@@ -615,7 +609,7 @@
     <div class="xp-titlebar">
       <div class="xp-title-left">
         <span>✧</span>
-        <span>C:\SHILLONG_ARCHIVES\MATTHEW_SAWIAN_24BJMC20.exe</span>
+        <span>SHILLONG_ARCHIVES.exe</span>
       </div>
       <div class="xp-controls">
         <span class="xp-ctrl-btn">_</span>
@@ -625,14 +619,13 @@
     </div>
 
     <div class="xp-menubar">
-      <div>File &nbsp;&nbsp; Edit &nbsp;&nbsp; View &nbsp;&nbsp; Favorites &nbsp;&nbsp; Tools &nbsp;&nbsp; Help</div>
-      <div class="xp-address-bar">Address: https://galahadsawian.github.io/shillong_archives</div>
+      <div>File &nbsp; Edit &nbsp; View &nbsp; Help</div>
+      <div class="xp-address-bar">https://galahadsawian.github.io/shillong_archives</div>
     </div>
 
     <div class="xp-content">
       <div class="hero-banner">
-        <!-- Cyber Sigil Wing & Thorn SVG Crest -->
-        <svg viewBox="0 0 500 60" style="width: 280px; height: 38px; stroke: #a8c7fa; fill: none; stroke-width: 1.3;">
+        <svg viewBox="0 0 500 60" style="width: 240px; height: 32px; stroke: #a8c7fa; fill: none; stroke-width: 1.3;">
           <path d="M250,5 L250,55 M235,25 L265,25 M250,30 C210,10 150,5 60,25 C140,20 190,35 250,45 C310,35 360,20 440,25 C350,5 290,10 250,30 Z"/>
           <circle cx="250" cy="30" r="6" />
           <path d="M160,22 L145,8 M340,22 L355,8 M195,28 L180,48 M305,28 L320,48"/>
@@ -640,13 +633,13 @@
 
         <h1>Shillong: Sonic &amp; Visual Archives</h1>
         <div class="author-badge">
-          Matthew S Dkhar Sawian // Roll No: 24BJMC20 // V Sem Vis Com<br>
+          Matthew S Dkhar Sawian // 24BJMC20<br>
           Kristu Jayanti (Deemed to be University)
         </div>
 
         <div class="xp-tabs">
-          <button id="btn-music" class="xp-tab-btn active" onclick="switchBlog('music')">I. The Music Capital of India</button>
-          <button id="btn-culture" class="xp-tab-btn" onclick="switchBlog('culture')">II. Fashion &amp; Art Scene</button>
+          <button id="btn-music" class="xp-tab-btn active" onclick="switchBlog('music')">I. The Music Capital</button>
+          <button id="btn-culture" class="xp-tab-btn" onclick="switchBlog('culture')">II. Fashion &amp; Art</button>
         </div>
       </div>
     </div>
@@ -661,7 +654,7 @@
       <div class="xp-titlebar">
         <div class="xp-title-left">
           <span>✧</span>
-          <span>Blog_01_The_Music_Capital_of_India.doc // Read Only</span>
+          <span>Blog_01_Music_Capital.doc</span>
         </div>
         <div class="xp-controls">
           <span class="xp-ctrl-btn">_</span>
@@ -675,7 +668,7 @@
         <!-- 1. Intro Text + Overall Concert Picture -->
         <div class="section-bar">
           <h2>01 // Acoustic Infrastructure</h2>
-          <span>[INTRO_ARCHIVE]</span>
+          <span>[INTRO]</span>
         </div>
 
         <div class="prose">
@@ -684,11 +677,10 @@
         </div>
 
         <div class="xp-frame">
-          <img class="hero-img" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80" alt="Massive outdoor stadium concert crowd in Shillong under stage lights">
+          <img class="hero-img" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1200&q=80" alt="Concert crowd in Shillong">
           <div class="caption-credit">FIG 1.0 // MAIN STAGE CONCERT TURNOVER // SHILLONG FESTIVAL GROUNDS</div>
         </div>
 
-        <!-- Cyber Sigil SVG Divider -->
         <div class="cybersigil-art">
           <svg viewBox="0 0 400 50">
             <path d="M10,25 L390,25 M200,4 L200,46 M170,12 L200,25 L170,38 M230,12 L200,25 L230,38" stroke-width="1.2"/>
@@ -701,60 +693,59 @@
         <!-- 2. Quotes from International Artists with Pictures of Them Performing -->
         <div class="section-bar">
           <h2>02 // Global Voices in the Hills</h2>
-          <span>[ARTIST_QUOTES]</span>
+          <span>[QUOTES]</span>
         </div>
 
         <div class="artist-grid">
           <div class="artist-dialog">
             <div class="artist-dialog-header">
-              <span>Ed_Sheeran_Live.jpg</span>
+              <span>Ed_Sheeran.jpg</span>
               <span>[X]</span>
             </div>
             <div class="artist-dialog-body">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ed_Sheeran-6886_(cropped).jpg" alt="Ed Sheeran performing live with acoustic guitar">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ed_Sheeran-6886_(cropped).jpg" alt="Ed Sheeran">
               <div class="artist-quote">"Shillong, how are you feeling? Thank you so much for coming here. It is my first time here, and the energy in these hills is unlike anywhere else we have played."</div>
-              <div class="artist-name">Ed Sheeran // Mathematics Tour (2025)</div>
+              <div class="artist-name">Ed Sheeran // 2025</div>
             </div>
           </div>
 
           <div class="artist-dialog">
             <div class="artist-dialog-header">
-              <span>Megadeth_Stage.jpg</span>
+              <span>Megadeth.jpg</span>
               <span>[X]</span>
             </div>
             <div class="artist-dialog-body">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Megadeth_-_Wacken_Open_Air_2023_09.jpg" alt="Megadeth performing thrash metal under stage lights">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Megadeth_-_Wacken_Open_Air_2023_09.jpg" alt="Megadeth">
               <div class="artist-quote">"Playing up in the mountains of Northeast India to thousands of metalheads singing every single guitar riff back at us proved that real rock music is alive and thriving here."</div>
-              <div class="artist-name">Dave Mustaine (Megadeth) // NH7 Weekender</div>
+              <div class="artist-name">Dave Mustaine // NH7</div>
             </div>
           </div>
 
           <div class="artist-dialog">
             <div class="artist-dialog-header">
-              <span>Akon_CherryBlossom.jpg</span>
+              <span>Akon.jpg</span>
               <span>[X]</span>
             </div>
             <div class="artist-dialog-body">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Akon_in_November_2022.jpg" alt="Akon commanding the festival crowd on stage">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Akon_in_November_2022.jpg" alt="Akon">
               <div class="artist-quote">"The turnout and the passion at the Cherry Blossom Festival blew my mind. You come all the way into the clouds and find a crowd that parties harder than stadiums in Europe."</div>
-              <div class="artist-name">Akon // Cherry Blossom Festival (2024)</div>
+              <div class="artist-name">Akon // 2024</div>
             </div>
           </div>
 
           <div class="artist-dialog">
             <div class="artist-dialog-header">
-              <span>Eric_Martin_MrBig.jpg</span>
+              <span>Eric_Martin.jpg</span>
               <span>[X]</span>
             </div>
             <div class="artist-dialog-body">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eric_Martin_2018.jpg" alt="Eric Martin performing classic rock vocal set">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eric_Martin_2018.jpg" alt="Eric Martin">
               <div class="artist-quote">"I have toured the globe for decades, but the reverence for classic guitar rock in the Khasi Hills makes Shillong feel like a sacred sanctuary for live musicians."</div>
-              <div class="artist-name">Eric Martin (Mr. Big) // Live in Shillong</div>
+              <div class="artist-name">Eric Martin // Mr. Big</div>
             </div>
           </div>
         </div>
 
-        <!-- Cyber Sigil SVG Divider -->
         <div class="cybersigil-art">
           <svg viewBox="0 0 400 50">
             <path d="M10,25 L390,25 M200,4 L200,46 M170,12 L200,25 L170,38 M230,12 L200,25 L230,38" stroke-width="1.2"/>
@@ -764,110 +755,112 @@
           </svg>
         </div>
 
-        <!-- 3. Working Video of K Pop in Shillong -->
+        <!-- 3. Working Video -->
         <div class="section-bar">
-          <h2>03 // International Pop Stages in the Hills</h2>
-          <span>[XP_MEDIA_PLAYER]</span>
+          <h2>03 // International Pop Stages</h2>
+          <span>[VIDEO]</span>
         </div>
 
         <div class="xp-media-player">
           <div class="xp-titlebar">
-            <span>Windows Media Player // Live_Festival_Broadcast.wmv</span>
+            <span>MediaPlayer // Live_Festival.wmv</span>
             <span>[X]</span>
           </div>
           <div class="xp-media-body">
             <h3>K Pop Live at Shillong Cherry Blossom Festival</h3>
-            <p style="font-size: 0.92em; color: #b0c4de;">South Korean girl group PIXY and global pop acts commanding the stage in Meghalaya during the autumn festival circuit.</p>
-            <iframe src="https://www.youtube.com/embed/44YP-P8H5TE" title="K Pop Live at Shillong Cherry Blossom Festival" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p style="font-size: 0.85em; color: #b0c4de;">Global pop acts commanding the stage in Meghalaya.</p>
+            <iframe src="https://www.youtube.com/embed/44YP-P8H5TE" title="K Pop Live at Shillong" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
 
-        <!-- 4. Infographics of Artists Who Came to Shillong (Timeline + 20 Artists) -->
+        <!-- 4. Infographics -->
         <div class="section-bar">
           <h2>04 // Sonic Cartography &amp; Roster</h2>
-          <span>[INFOGRAPHIC_DATA]</span>
+          <span>[DATA]</span>
         </div>
 
         <div class="infographic-panel">
-          <h3 style="text-align: center; margin-top: 0; color: #003399; letter-spacing: 2px;">CHRONOLOGY OF MAJOR HEADLINERS IN SHILLONG</h3>
-          <table class="xp-table">
-            <thead>
-              <tr>
-                <th>Year</th>
-                <th>International &amp; National Headliners</th>
-                <th>Venue / Festival Circuit</th>
-                <th>Est. Attendance</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>2004 to 2011</strong></td>
-                <td>FireHouse, Mr. Big, Scorpions, Michael Learns to Rock</td>
-                <td>J.N. Stadium / Polo Grounds</td>
-                <td>25,000+</td>
-              </tr>
-              <tr>
-                <td><strong>2015 to 2019</strong></td>
-                <td>Megadeth, Steven Wilson, Fear Factory, The Wailers, Textures</td>
-                <td>NH7 Weekender (RBDSA / Wenfield)</td>
-                <td>40,000+</td>
-              </tr>
-              <tr>
-                <td><strong>2021 to 2023</strong></td>
-                <td>PIXY (K Pop), Hybrid Theory, Ronan Keating, Ne Yo, Jonas Blue</td>
-                <td>Shillong Cherry Blossom Festival</td>
-                <td>50,000+</td>
-              </tr>
-              <tr>
-                <td><strong>2024 to 2025</strong></td>
-                <td>Ed Sheeran, Akon, Lucas (K Pop), Clean Bandit, Boney M, The Script</td>
-                <td>Polo Grounds / Mathematics Tour</td>
-                <td>75,000+</td>
-              </tr>
-              <tr>
-                <td><strong>2026</strong></td>
-                <td>Khalid, Swae Lee, Boys Like Girls</td>
-                <td>Cherry Blossom Festival Edition</td>
-                <td>80,000+ (Projected)</td>
-              </tr>
-            </tbody>
-          </table>
+          <h3 style="text-align: center; margin-top: 0; color: #003399; font-size: 1em; letter-spacing: 1px;">CHRONOLOGY OF MAJOR HEADLINERS IN SHILLONG</h3>
+          <div style="overflow-x: auto;">
+            <table class="xp-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Headliners</th>
+                  <th>Venue / Circuit</th>
+                  <th>Attendance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>2004 to 2011</strong></td>
+                  <td>FireHouse, Mr. Big, Scorpions, MLTR</td>
+                  <td>J.N. Stadium / Polo</td>
+                  <td>25,000+</td>
+                </tr>
+                <tr>
+                  <td><strong>2015 to 2019</strong></td>
+                  <td>Megadeth, Steven Wilson, The Wailers</td>
+                  <td>NH7 Weekender</td>
+                  <td>40,000+</td>
+                </tr>
+                <tr>
+                  <td><strong>2021 to 2023</strong></td>
+                  <td>PIXY, Hybrid Theory, Ronan Keating, Ne Yo</td>
+                  <td>Cherry Blossom</td>
+                  <td>50,000+</td>
+                </tr>
+                <tr>
+                  <td><strong>2024 to 2025</strong></td>
+                  <td>Ed Sheeran, Akon, Lucas, Boney M</td>
+                  <td>Polo Grounds / Tour</td>
+                  <td>75,000+</td>
+                </tr>
+                <tr>
+                  <td><strong>2026</strong></td>
+                  <td>Khalid, Swae Lee, Boys Like Girls</td>
+                  <td>Cherry Blossom Edition</td>
+                  <td>80,000+</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <h3 style="text-align: center; color: #003399; letter-spacing: 2px; margin-bottom: 10px;">THE 20 DEFINING ARTISTS OF THE SHILLONG STAGE</h3>
+          <h3 style="text-align: center; color: #003399; font-size: 1em; letter-spacing: 1px; margin-top: 25px;">THE 20 DEFINING ARTISTS</h3>
           <div class="roster-grid">
             <div class="roster-col">
               <h4>Local Legends (5)</h4>
               <ol>
-                <li><strong>Soulmate:</strong> Tipriti Kharbangar and Rudy Wallang's iconic blues rock powerhouse.</li>
-                <li><strong>Lou Majaw:</strong> The legendary troubadour and pioneer of Shillong's rock ethos.</li>
-                <li><strong>Snow White:</strong> Trailblazers of indigenous Khasi folk rock fusion.</li>
-                <li><strong>Khasi Bloodz:</strong> Multilingual hip hop collective putting Northeast rap on the map.</li>
-                <li><strong>Summersalt:</strong> Contemporary chroniclers of Khasi acoustic instrumentation.</li>
+                <li><strong>Soulmate:</strong> Blues rock powerhouse.</li>
+                <li><strong>Lou Majaw:</strong> Rock pioneer.</li>
+                <li><strong>Snow White:</strong> Folk rock fusion.</li>
+                <li><strong>Khasi Bloodz:</strong> Rap collective.</li>
+                <li><strong>Summersalt:</strong> Acoustic instrumentation.</li>
               </ol>
             </div>
             <div class="roster-col">
               <h4>Indian Heavyweights (5)</h4>
               <ol start="6">
-                <li><strong>Papon:</strong> Folk electronica stalwart and perennial Weekender favorite.</li>
-                <li><strong>Nucleya:</strong> Bass heavy electronic producer shaking the mountain valleys.</li>
-                <li><strong>Indian Ocean:</strong> Pioneers of Indian fusion rock with legendary outdoor sets.</li>
-                <li><strong>Amit Trivedi:</strong> Orchestral live contemporary ensembles under the night sky.</li>
-                <li><strong>Dualist Inquiry:</strong> Guitar driven electronic rock staple of the indie circuit.</li>
+                <li><strong>Papon:</strong> Folk electronica.</li>
+                <li><strong>Nucleya:</strong> Bass producer.</li>
+                <li><strong>Indian Ocean:</strong> Fusion rock.</li>
+                <li><strong>Amit Trivedi:</strong> Live ensembles.</li>
+                <li><strong>Dualist Inquiry:</strong> Electronic rock.</li>
               </ol>
             </div>
             <div class="roster-col">
-              <h4>International Icons (10)</h4>
+              <h4>International (10)</h4>
               <ol start="11">
-                <li><strong>Ed Sheeran:</strong> Sold out 2025 stadium spectacle at J.N. Stadium.</li>
-                <li><strong>Megadeth:</strong> Thrash metal titans who headlined NH7 Shillong.</li>
-                <li><strong>Lucas:</strong> K Pop soloist drawing massive youth turnouts in 2024.</li>
-                <li><strong>Akon:</strong> Global R&amp;B hitmaker headlining the Superfan Tour.</li>
-                <li><strong>Khalid:</strong> Multi platinum R&amp;B voice anchoring the 2026 lineup.</li>
-                <li><strong>Swae Lee:</strong> Global hip hop phenomenon announced for 2026.</li>
-                <li><strong>Boney M:</strong> Disco pioneers closing out their farewell tour in the hills.</li>
-                <li><strong>Scorpions:</strong> German hard rock legends who electrified Polo Grounds.</li>
-                <li><strong>Ne Yo:</strong> Smooth 2000s R&amp;B showman captivating the autumn festival.</li>
-                <li><strong>FireHouse:</strong> American hard rock veterans beloved by local guitarists.</li>
+                <li><strong>Ed Sheeran:</strong> 2025 stadium tour.</li>
+                <li><strong>Megadeth:</strong> Thrash metal.</li>
+                <li><strong>Lucas:</strong> K Pop soloist.</li>
+                <li><strong>Akon:</strong> R&amp;B hitmaker.</li>
+                <li><strong>Khalid:</strong> R&amp;B voice.</li>
+                <li><strong>Swae Lee:</strong> Hip hop icon.</li>
+                <li><strong>Boney M:</strong> Disco pioneers.</li>
+                <li><strong>Scorpions:</strong> Hard rock.</li>
+                <li><strong>Ne Yo:</strong> R&amp;B showman.</li>
+                <li><strong>FireHouse:</strong> Rock veterans.</li>
               </ol>
             </div>
           </div>
@@ -875,7 +868,7 @@
 
         <!-- 5. Body of Text -->
         <div class="section-bar">
-          <h2>05 // The Economics &amp; Ethos of Live Sound</h2>
+          <h2>05 // Economics &amp; Ethos of Live Sound</h2>
           <span>[ANALYSIS]</span>
         </div>
 
@@ -884,10 +877,10 @@
           <p>Furthermore, the demographic range at a Shillong gig defies global norms. At a single festival ground, you will witness three generations of a Khasi family analyzing the pedalboard setup of a progressive metal guitarist, followed immediately by college students choreographing pop routines and veteran rockers singing every lyric to FireHouse and Mr. Big. This cross pollination of genres from extreme thrash metal and classic 1980s hard rock to contemporary pop and indigenous Duitara folk has forged an ecosystem where artists feel genuinely heard rather than merely consumed through smartphone screens.</p>
         </div>
 
-        <!-- 6. Conclusion with Working Audio Snippet -->
+        <!-- 6. Conclusion -->
         <div class="section-bar">
           <h2>06 // Coda: The Eternal Encore</h2>
-          <span>[CONCLUSION_AUDIO]</span>
+          <span>[CONCLUSION]</span>
         </div>
 
         <div class="prose">
@@ -896,31 +889,29 @@
 
         <div class="xp-media-player">
           <div class="xp-titlebar">
-            <span>Sound_Recorder.exe // Shillong_Harmonic_Stream.wav</span>
+            <span>SoundRecorder.exe // Harmonic_Stream.wav</span>
             <span>[X]</span>
           </div>
           <div class="xp-media-body">
-            <h3>Audio Archive // Acoustic Resonance of the Hills</h3>
-            <p style="font-size: 0.9em; color: #b0c4de;">Ambient Backstage &amp; Crowd Frequency Simulation // Click below to initialize the browser native Web Audio acoustic chord progression.</p>
+            <h3>Audio Archive // Resonance of the Hills</h3>
+            <p style="font-size: 0.82em; color: #b0c4de;">Click below to initialize the browser native Web Audio acoustic chord progression.</p>
             <div class="cyber-audio-player">
-              <button id="audio-btn-1" class="audio-btn" onclick="toggleSynthAudio()">► Play Acoustic Archive</button>
-              <div id="audio-status-1" class="audio-status">STATUS: STANDBY // 432Hz AMBIENT CHORD SYNTHESIS</div>
+              <button id="audio-btn-1" class="audio-btn" onclick="toggleSynthAudio()">► Play Audio Archive</button>
+              <div id="audio-status-1" class="audio-status">STATUS: STANDBY // 432Hz</div>
             </div>
           </div>
         </div>
 
-        <!-- 7. Links to Sources of Pictures and Video -->
         <div class="sources-box">
-          <h3>07 // Archival Sources &amp; Media Credits (Blog I)</h3>
+          <h3>07 // Archival Sources &amp; Media Credits</h3>
           <ul>
-            <li><a href="https://unsplash.com/photos/a-large-crowd-of-people-at-a-concert-1459749411175-04bf5292ceea" target="_blank">Hero Concert Crowd Photography // Unsplash Live Music Archive</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Ed_Sheeran-6886_(cropped).jpg" target="_blank">Artist Photo 1: Ed Sheeran Performing Live // Wikimedia Commons (CC BY SA)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Megadeth_-_Wacken_Open_Air_2023_09.jpg" target="_blank">Artist Photo 2: Megadeth Performing Live on Stage // Wikimedia Commons (CC BY SA)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Akon_in_November_2022.jpg" target="_blank">Artist Photo 3: Akon Live Stage Performance // Wikimedia Commons (CC BY SA)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Eric_Martin_2018.jpg" target="_blank">Artist Photo 4: Eric Martin (Mr. Big) Vocal Performance // Wikimedia Commons (CC BY SA)</a></li>
-            <li><a href="https://www.youtube.com/watch?v=44YP-P8H5TE" target="_blank">Video: PIXY Full Live Performance at Shillong Cherry Blossom Festival // YouTube Archive</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/NH7_Weekender" target="_blank">Historical Lineup Data: NH7 Weekender Shillong Editions // Wikipedia Reference</a></li>
-            <li><a href="https://meghalayatourism.in/" target="_blank">Shillong Cherry Blossom Festival &amp; MGMP Cultural Documentation // Meghalaya Tourism</a></li>
+            <li><a href="https://unsplash.com/photos/a-large-crowd-of-people-at-a-concert-1459749411175-04bf5292ceea" target="_blank">Unsplash Live Music Archive</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Ed_Sheeran-6886_(cropped).jpg" target="_blank">Wikimedia Commons // Ed Sheeran</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Megadeth_-_Wacken_Open_Air_2023_09.jpg" target="_blank">Wikimedia Commons // Megadeth</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Akon_in_November_2022.jpg" target="_blank">Wikimedia Commons // Akon</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Eric_Martin_2018.jpg" target="_blank">Wikimedia Commons // Eric Martin</a></li>
+            <li><a href="https://www.youtube.com/watch?v=44YP-P8H5TE" target="_blank">YouTube // PIXY Live Performance</a></li>
+            <li><a href="https://meghalayatourism.in/" target="_blank">Meghalaya Tourism Documentation</a></li>
           </ul>
         </div>
 
@@ -937,7 +928,7 @@
       <div class="xp-titlebar">
         <div class="xp-title-left">
           <span>✧</span>
-          <span>Blog_02_Fashion_And_Art_In_Shillong.doc // Read Only</span>
+          <span>Blog_02_Fashion_And_Art.doc</span>
         </div>
         <div class="xp-controls">
           <span class="xp-ctrl-btn">_</span>
@@ -950,30 +941,27 @@
 
         <div class="section-bar">
           <h2>01 // The Sartorial Altitude</h2>
-          <span>[FASHION_COLLAGE]</span>
+          <span>[FASHION]</span>
         </div>
 
-        <!-- 1. Media Element: 4 Real Shillong / Khasi Fashion & Cultural Attire Photos in a Collage -->
         <div class="xp-frame">
           <div class="collage-grid">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Khasi_woman.jpg" alt="Khasi woman in traditional Jainsem attire and coral Paila beads in Meghalaya">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nongkrem_Dance_of_Meghalaya_India.jpg" alt="Traditional silk and silver crown adornments at Nongkrem Festival in Smit, Shillong">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/P_20190303_155118.jpg" alt="Dancers in ceremonial Khasi textiles at Shad Suk Mynsiem in Shillong">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Women_seller_at_Bara_Bazar,_Shillong.jpg" alt="Everyday traditional Jymphong and checkered Jainkyrshah street layering at Bara Bazar, Shillong">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Khasi_woman.jpg" alt="Khasi woman in traditional Jainsem attire">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Nongkrem_Dance_of_Meghalaya_India.jpg" alt="Nongkrem Dance Festival">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/P_20190303_155118.jpg" alt="Shad Suk Mynsiem">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/A_Women_seller_at_Bara_Bazar,_Shillong.jpg" alt="Bara Bazar Shillong">
           </div>
           <div class="caption-credit">
-            COLLAGE I (CLOCKWISE) // 1. KHASI JAINSEM &amp; PAILA CORAL BEADS (CHAHAT PATHANIA) // 2. NONGKREM CEREMONIAL COUTURE, SMIT // 3. EVERYDAY BARA BAZAR TEXTILES // 4. SHAD SUK MYNSIEM WEAVES (WIKIMEDIA COMMONS)
+            COLLAGE I // KHASI JAINSEM, NONGKREM, BARA BAZAR &amp; SHAD SUK MYNSIEM WEAVES
           </div>
         </div>
 
-        <!-- 2. Extensive Text on Shillong Fashion Scene (No K-pop references) -->
         <div class="prose">
           <p>Walk through the bustling lanes of Police Bazar, Laitumkhrah, or Bara Bazar (Iewduh) on a crisp November afternoon, and it becomes immediately apparent that Shillong possesses the most distinct sartorial identity in South Asia. Fashion in the East Khasi Hills is not a passive reflection of mainstream metropolitan malls; it is a sharp, deliberate synthesis of indigenous matrilineal heritage, high altitude climate utility, tailored vintage silhouettes, and subterranean rock subcultures. As a visual communicator, observing the street style of Shillong feels like watching a living editorial lookbook unfold in real time.</p>
           <p>At the foundation of this aesthetic is the extraordinary textile mastery of the Khasi, Jaintia, and Garo communities. Traditional garments such as the <em>Jainsem</em> (an elegant, flowing two piece body drape worn by Khasi women) and the <em>Dhara</em> (woven from rich, heavy mulberry silk for ceremonial occasions) are prized across generations. In everyday urban life, you constantly see the iconic checkered <em>Jainkyrshah</em> shoulder wrap layered effortlessly over modern winter trench coats, woollen cardigans, and heavy boots. Equally revered is <em>Ryndia</em> (indigenous Eri silk), hand spun and naturally dyed using organic forest pigments in weaving clusters like Umden. Known locally as peace silk because the silkworm is never harmed during harvesting, Ryndia possesses unique thermal properties that keep the wearer warm in Shillong's biting winter winds and cool under the mountain sun.</p>
           <p>What makes contemporary Shillong street fashion truly magnetic is how its youth remix these ancestral fabrics with alternative culture. Driven by the city's legendary thrift markets where bales of rare vintage leather jackets, wool overcoats, distressed denim, and 1990s band tees arrive across the hills, students and creatives curate outfits with surgical precision. Heavy silver tribal jewelry, traditional thick red coral beads (<em>Paila</em>), and intricately forged gold <em>Kpieng Ksiar</em> pendants coexist alongside tailored streetwear cuts, tartan skirts, and goth layering. In Shillong, dressing up is treated as a form of civic self respect and visual identity.</p>
         </div>
 
-        <!-- Cyber Sigil SVG Divider -->
         <div class="cybersigil-art">
           <svg viewBox="0 0 400 50">
             <path d="M10,25 L390,25 M200,4 L200,46 M170,12 L200,25 L170,38 M230,12 L200,25 L230,38" stroke-width="1.2"/>
@@ -985,23 +973,21 @@
 
         <div class="section-bar">
           <h2>02 // Architecture, Monoliths &amp; Canvas</h2>
-          <span>[ART_COLLAGE]</span>
+          <span>[ART]</span>
         </div>
 
-        <!-- 3. Media Element: 4 Real Shillong Art, Craft & Architectural Heritage Photos in a Collage -->
         <div class="xp-frame">
           <div class="collage-grid">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Help_of_Christians_Cathedral,_Shillong_(2).jpg" alt="Gothic revival architecture and stained glass art of Cathedral of Mary Help of Christians in Laitumkhrah, Shillong">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Don_Bosco_Centre_for_Indigenous_Culture.jpg" alt="Don Bosco Centre for Indigenous Cultures museum in Mawlai, Shillong">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Monoliths_at_mawphlang_sacred_forest.jpg" alt="Ancient Khasi stone monoliths at Mawphlang Sacred Forest near Shillong">
-            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/FLOWERING_OF_CHERRY_BLOSSOM_IN_SHILLONG.jpg" alt="Natural botanical canvas of blooming Himalayan cherry blossoms in Shillong">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Mary_Help_of_Christians_Cathedral,_Shillong_(2).jpg" alt="Cathedral of Mary Help of Christians">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Don_Bosco_Centre_for_Indigenous_Culture.jpg" alt="Don Bosco Centre">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Monoliths_at_mawphlang_sacred_forest.jpg" alt="Mawphlang Monoliths">
+            <img class="collage-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/FLOWERING_OF_CHERRY_BLOSSOM_IN_SHILLONG.jpg" alt="Cherry Blossoms">
           </div>
           <div class="caption-credit">
-            COLLAGE II (CLOCKWISE) // 1. CATHEDRAL BASILICA ARCHITECTURAL ART, LAITUMKHRAH (ANKAN) // 2. DON BOSCO INDIGENOUS ART ARCHIVE, MAWLAI // 3. HIMALAYAN CHERRY BLOSSOM CANOPY // 4. ANCIENT MEGALITHIC STONE ART, MAWPHLANG (WIKIMEDIA COMMONS)
+            COLLAGE II // CATHEDRAL, DON BOSCO, MAWPHLANG MONOLITHS &amp; CHERRY BLOSSOMS
           </div>
         </div>
 
-        <!-- 4. Extensive Text on Shillong Art Scene -->
         <div class="prose">
           <p>If fashion is the armor of Shillong's people, visual art and material craftsmanship form the skeletal structure of the city itself. The artistic lineage of the Khasi Hills begins with stone, iron, and bamboo. Across the plateau from the mist shrouded groves of the Mawphlang Sacred Forest to Nartiang stand thousands of ancient megalithic monoliths: vertical standing stones (<em>Mawbynna</em>) and flat dolmen tables (<em>Mawkynthei</em>) erected to honor ancestors and clan matriarchs. This monumental spatial awareness translates directly into the city's historic architecture, exemplified by the towering Gothic Revival arches and terracotta Stations of the Cross inside the Cathedral of Mary Help of Christians in Laitumkhrah, as well as the timber framed Assam type heritage bungalows scattered across Laban and Brookside.</p>
           <p>In the contemporary era, Shillong's visual arts movement has expanded rapidly from traditional cane and bamboo weaving and blacksmithing into urban murals, independent art cafes, and multimedia installations. Anchored by institutions like the seven story Don Bosco Centre for Indigenous Cultures (DBCIC) in Mawlai and creative hubs around Ward's Lake, young visual artists, illustrators, and filmmakers are reinterpreting Khasi folklore such as the legend of the <em>U Thlen</em> or the sacred living root bridges of <em>Jingkieng Jri</em> through digital illustration, street graffiti, and experimental cinema.</p>
@@ -1010,23 +996,21 @@
 
         <div class="section-bar">
           <h2>03 // Khasi Cultural Heritage in Motion</h2>
-          <span>[KHASI_HERITAGE_VIDEO]</span>
+          <span>[VIDEO]</span>
         </div>
 
-        <!-- 5. Media Element: Working Video of Authentic Khasi Culture (Shad Suk Mynsiem) -->
         <div class="xp-media-player">
           <div class="xp-titlebar">
-            <span>Windows Media Player // Khasi_Shad_Suk_Mynsiem_Heritage.wmv</span>
+            <span>MediaPlayer // Khasi_Culture.wmv</span>
             <span>[X]</span>
           </div>
           <div class="xp-media-body">
-            <h3>Shad Suk Mynsiem // The Thanksgiving Dance of the Khasi Hills</h3>
-            <p style="font-size: 0.92em; color: #b0c4de;">A visual documentation of traditional Khasi ceremonial attire, golden crowns, coral beads, and indigenous percussion during the sacred Shad Suk Mynsiem festival at Weiking Ground in Shillong.</p>
-            <iframe src="https://www.youtube.com/embed/Xqs3a11VemE" title="Shad Suk Mynsiem Khasi Cultural Festival in Meghalaya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h3>Shad Suk Mynsiem // Thanksgiving Dance</h3>
+            <p style="font-size: 0.85em; color: #b0c4de;">Traditional Khasi ceremonial attire, golden crowns, and indigenous percussion in Shillong.</p>
+            <iframe src="https://www.youtube.com/embed/Xqs3a11VemE" title="Shad Suk Mynsiem" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
 
-        <!-- 6. Conclusion Text -->
         <div class="section-bar">
           <h2>04 // Synthesis: The Living Gallery</h2>
           <span>[CONCLUSION]</span>
@@ -1036,20 +1020,16 @@
           <p>Ultimately, you cannot separate the sound of Shillong from its visual soul. The guitar riffs of Police Bazar, the handwoven Ryndia silk draped over a thrifted leather jacket, the sacred rhythms of Shad Suk Mynsiem, and the ancient stone monoliths standing guard above the clouds are all expressions of the exact same creative defiance. In an increasingly homogenized digital world, Shillong remains a fiercely original sanctuary where heritage is not locked behind glass, but worn on the streets, painted on the walls, and amplified into the mountain air.</p>
         </div>
 
-        <!-- 7. Links to All Sources and Credits at the Very End -->
         <div class="sources-box">
-          <h3>05 // Archival Sources &amp; Photographic Credits (Blog II)</h3>
+          <h3>05 // Archival Sources &amp; Credits</h3>
           <ul>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Khasi_woman.jpg" target="_blank">Fashion Photo 1: Khasi Woman in Traditional Jainsem &amp; Coral Paila Beads // Credit: Chahat Pathania (Wikimedia Commons, CC BY SA 4.0)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Nongkrem_Dance_of_Meghalaya_India.jpg" target="_blank">Fashion Photo 2: Traditional Silk &amp; Silver Regalia at Nongkrem Dance Festival, Smit // Credit: Wikimedia Commons Archive (CC BY SA)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:P_20190303_155118.jpg" target="_blank">Fashion Photo 3: Ceremonial Khasi Textiles at Shad Suk Mynsiem Festival, Shillong // Credit: Wikimedia Commons (CC BY SA 4.0)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:A_Women_seller_at_Bara_Bazar,_Shillong.jpg" target="_blank">Fashion Photo 4: Everyday Checkered Jainkyrshah Layering at Bara Bazar, Shillong // Credit: Wikimedia Commons Archive</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Mary_Help_of_Christians_Cathedral,_Shillong_(2).jpg" target="_blank">Art Photo 1: Cathedral of Mary Help of Christians Architectural Art, Shillong // Credit: ANKAN (Wikimedia Commons, CC BY SA 4.0)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Don_Bosco_Centre_for_Indigenous_Culture.jpg" target="_blank">Art Photo 2: Don Bosco Centre for Indigenous Cultures Museum, Mawlai Shillong // Credit: Wikimedia Commons (CC BY SA 4.0)</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Monoliths_at_mawphlang_sacred_forest.jpg" target="_blank">Art Photo 3: Ancient Megalithic Stone Monoliths at Mawphlang Sacred Forest // Credit: Wikimedia Commons Archive</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:FLOWERING_OF_CHERRY_BLOSSOM_IN_SHILLONG.jpg" target="_blank">Art Photo 4: Flowering of Himalayan Cherry Blossoms in Shillong // Credit: Wikimedia Commons (CC BY SA 4.0)</a></li>
-            <li><a href="https://www.youtube.com/watch?v=Xqs3a11VemE" target="_blank">Video Documentary: Shad Suk Mynsiem Traditional Khasi Cultural Festival in Meghalaya // YouTube Archive</a></li>
-            <li><a href="https://www.incredibleindia.gov.in/en/meghalaya/shillong/witness-shillongs-cultural-kaleidoscope" target="_blank">Cultural Research Reference: Explore the Arts &amp; Textile Scene in Shillong // Incredible India / Meghalaya Tourism</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Khasi_woman.jpg" target="_blank">Wikimedia Commons // Khasi Woman (CC BY SA 4.0)</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Nongkrem_Dance_of_Meghalaya_India.jpg" target="_blank">Wikimedia Commons // Nongkrem Dance</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:P_20190303_155118.jpg" target="_blank">Wikimedia Commons // Shad Suk Mynsiem</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Mary_Help_of_Christians_Cathedral,_Shillong_(2).jpg" target="_blank">Wikimedia Commons // Cathedral Shillong</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Monoliths_at_mawphlang_sacred_forest.jpg" target="_blank">Wikimedia Commons // Mawphlang Monoliths</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Xqs3a11VemE" target="_blank">YouTube // Shad Suk Mynsiem Cultural Documentary</a></li>
+            <li><a href="https://www.incredibleindia.gov.in/" target="_blank">Incredible India / Meghalaya Tourism Archives</a></li>
           </ul>
         </div>
 
@@ -1064,15 +1044,14 @@
   <div class="xp-start-btn">
     <span>✧</span> start
   </div>
-  <div style="font-family: 'Courier New', monospace; letter-spacing: 1px;">
-    MATTHEW S DKHAR SAWIAN // 24BJMC20 // KRISTU JAYANTI (DEEMED TO BE UNIVERSITY)
+  <div class="xp-taskbar-center">
+    MATTHEW S DKHAR SAWIAN // 24BJMC20
   </div>
   <div class="xp-tray">
-    SHILLONG_OS // 2026
+    XP // 2026
   </div>
 </div>
 
-<!-- JavaScript for Blog Toggling & Web Audio Synthesizer -->
 <script>
   function switchBlog(blogId) {
     document.getElementById('blog-music').classList.remove('active');
@@ -1110,18 +1089,19 @@
       });
 
       isPlaying = true;
-      btn.textContent = '■ Stop Acoustic Archive';
-      status.textContent = 'STATUS: PLAYING // LIVE 432Hz AMBIENT HARMONIC STREAM';
+      btn.textContent = '■ Stop Audio Archive';
+      status.textContent = 'STATUS: PLAYING // 432Hz';
     } else {
       oscillators.forEach(osc => osc.stop());
       oscillators = [];
       if (audioCtx) audioCtx.close();
       isPlaying = false;
-      btn.textContent = '► Play Acoustic Archive';
-      status.textContent = 'STATUS: STANDBY // 432Hz AMBIENT CHORD SYNTHESIS';
+      btn.textContent = '► Play Audio Archive';
+      status.textContent = 'STATUS: STANDBY // 432Hz';
     }
   }
 </script>
 
 </body>
 </html>
+
