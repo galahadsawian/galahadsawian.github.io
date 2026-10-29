@@ -220,6 +220,36 @@
   .blog-section { display: none; }
   .blog-section.active { display: block; }
 
+  /* Blog Post Titles & Executive Summary Cards */
+  .blog-title-card {
+    background: #e8ecf4;
+    border: 2px inset #b0b8c4;
+    padding: 16px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .blog-title-card h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.6em;
+    color: #003399;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .summary-box {
+    background: #ffffff;
+    border: 1px solid #99aabf;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.92em;
+    color: #2d3748;
+    margin-top: 10px;
+  }
+
+  .summary-box strong { color: #002266; }
+
   .section-bar {
     background: var(--xp-silver-bar);
     border: 1px solid #8c96a6;
@@ -233,7 +263,7 @@
     gap: 5px;
   }
 
-  .section-bar h2 {
+  .section-bar h3 {
     font-family: 'Georgia', serif;
     font-size: 1.15em;
     margin: 0;
@@ -517,7 +547,6 @@
     text-decoration: underline;
   }
 
-  /* Windows XP Bottom Taskbar */
   .xp-taskbar {
     position: fixed;
     bottom: 0;
@@ -571,7 +600,6 @@
     flex-shrink: 0;
   }
 
-  /* Desktop and Tablet Enhancements (min-width: 768px) */
   @media (min-width: 768px) {
     body { padding: 25px 15px 70px 15px; }
     .xp-content { padding: 30px; }
@@ -579,7 +607,7 @@
     .hero-banner h1 { font-size: 2.6em; }
     .author-badge { font-size: 0.86em; }
     .xp-tab-btn { width: auto; font-size: 0.9em; padding: 10px 24px; }
-    .section-bar h2 { font-size: 1.45em; }
+    .section-bar h3 { font-size: 1.45em; }
     .hero-img { height: 430px; }
     .caption-credit { font-size: 0.78em; }
     .artist-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
@@ -665,9 +693,17 @@
 
       <div class="xp-content">
 
+        <!-- Blog 1 Title & Executive Summary -->
+        <div class="blog-title-card">
+          <h2>The Music Capital of India</h2>
+          <div class="summary-box">
+            <strong>Executive Summary:</strong> This archival feature explores Shillong status as the live music capital of India, detailing how generational musical literacy, government grassroots projects, and massive festival crowds at NH7 Weekender and Cherry Blossom unite local legends with global icons like Ed Sheeran, Megadeth, Akon, and Mr. Big.
+          </div>
+        </div>
+
         <!-- 1. Intro Text + Overall Concert Picture -->
         <div class="section-bar">
-          <h2>01 // Acoustic Infrastructure</h2>
+          <h3>01 // Acoustic Infrastructure</h3>
           <span>[INTRO]</span>
         </div>
 
@@ -692,7 +728,7 @@
 
         <!-- 2. Quotes from International Artists with Pictures of Them Performing -->
         <div class="section-bar">
-          <h2>02 // Global Voices in the Hills</h2>
+          <h3>02 // Global Voices in the Hills</h3>
           <span>[QUOTES]</span>
         </div>
 
@@ -727,7 +763,7 @@
               <span>[X]</span>
             </div>
             <div class="artist-dialog-body">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Akon_in_November_2022.jpg" alt="Akon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Akon_2010.jpg" alt="Akon">
               <div class="artist-quote">"The turnout and the passion at the Cherry Blossom Festival blew my mind. You come all the way into the clouds and find a crowd that parties harder than stadiums in Europe."</div>
               <div class="artist-name">Akon // 2024</div>
             </div>
@@ -739,7 +775,7 @@
               <span>[X]</span>
             </div>
             <div class="artist-dialog-body">
-              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eric_Martin_2018.jpg" alt="Eric Martin">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Eric_Martin_-_MR._BIG_-_2018.jpg" alt="Eric Martin">
               <div class="artist-quote">"I have toured the globe for decades, but the reverence for classic guitar rock in the Khasi Hills makes Shillong feel like a sacred sanctuary for live musicians."</div>
               <div class="artist-name">Eric Martin // Mr. Big</div>
             </div>
@@ -757,7 +793,7 @@
 
         <!-- 3. Working Video -->
         <div class="section-bar">
-          <h2>03 // International Pop Stages</h2>
+          <h3>03 // International Pop Stages</h3>
           <span>[VIDEO]</span>
         </div>
 
@@ -775,12 +811,12 @@
 
         <!-- 4. Infographics -->
         <div class="section-bar">
-          <h2>04 // Sonic Cartography &amp; Roster</h2>
+          <h3>04 // Sonic Cartography &amp; Roster</h3>
           <span>[DATA]</span>
         </div>
 
         <div class="infographic-panel">
-          <h3 style="text-align: center; margin-top: 0; color: #003399; font-size: 1em; letter-spacing: 1px;">CHRONOLOGY OF MAJOR HEADLINERS IN SHILLONG</h3>
+          <h4 style="text-align: center; margin-top: 0; color: #003399; font-size: 1em; letter-spacing: 1px;">CHRONOLOGY OF MAJOR HEADLINERS IN SHILLONG</h4>
           <div style="overflow-x: auto;">
             <table class="xp-table">
               <thead>
@@ -826,7 +862,7 @@
             </table>
           </div>
 
-          <h3 style="text-align: center; color: #003399; font-size: 1em; letter-spacing: 1px; margin-top: 25px;">THE 20 DEFINING ARTISTS</h3>
+          <h4 style="text-align: center; color: #003399; font-size: 1em; letter-spacing: 1px; margin-top: 25px;">THE 20 DEFINING ARTISTS</h4>
           <div class="roster-grid">
             <div class="roster-col">
               <h4>Local Legends (5)</h4>
@@ -868,7 +904,7 @@
 
         <!-- 5. Body of Text -->
         <div class="section-bar">
-          <h2>05 // Economics &amp; Ethos of Live Sound</h2>
+          <h3>05 // Economics &amp; Ethos of Live Sound</h3>
           <span>[ANALYSIS]</span>
         </div>
 
@@ -879,7 +915,7 @@
 
         <!-- 6. Conclusion -->
         <div class="section-bar">
-          <h2>06 // Coda: The Eternal Encore</h2>
+          <h3>06 // Coda: The Eternal Encore</h3>
           <span>[CONCLUSION]</span>
         </div>
 
@@ -908,8 +944,8 @@
             <li><a href="https://unsplash.com/photos/a-large-crowd-of-people-at-a-concert-1459749411175-04bf5292ceea" target="_blank">Unsplash Live Music Archive</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Ed_Sheeran-6886_(cropped).jpg" target="_blank">Wikimedia Commons // Ed Sheeran</a></li>
             <li><a href="https://commons.wikimedia.org/wiki/File:Megadeth_-_Wacken_Open_Air_2023_09.jpg" target="_blank">Wikimedia Commons // Megadeth</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Akon_in_November_2022.jpg" target="_blank">Wikimedia Commons // Akon</a></li>
-            <li><a href="https://commons.wikimedia.org/wiki/File:Eric_Martin_2018.jpg" target="_blank">Wikimedia Commons // Eric Martin</a></li>
+            <li><a href="https://upload.wikimedia.org/wikipedia/commons/3/36/Akon_2010.jpg" target="_blank">Wikimedia Commons // Akon</a></li>
+            <li><a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/Eric_Martin_-_MR._BIG_-_2018.jpg" target="_blank">Wikimedia Commons // Eric Martin</a></li>
             <li><a href="https://www.youtube.com/watch?v=44YP-P8H5TE" target="_blank">YouTube // PIXY Live Performance</a></li>
             <li><a href="https://meghalayatourism.in/" target="_blank">Meghalaya Tourism Documentation</a></li>
           </ul>
@@ -939,8 +975,16 @@
 
       <div class="xp-content">
 
+        <!-- Blog 2 Title & Executive Summary -->
+        <div class="blog-title-card">
+          <h2>The Canvas of the Clouds: Fashion and Art in Shillong</h2>
+          <div class="summary-box">
+            <strong>Executive Summary:</strong> This visual culture feature highlights Shillong's unique sartorial identity and artistic heritage, examining how traditional Khasi textiles like Jainsem and Ryndia silk, ancient monoliths, gothic architecture, and Shad Suk Mynsiem dances form a living gallery.
+          </div>
+        </div>
+
         <div class="section-bar">
-          <h2>01 // The Sartorial Altitude</h2>
+          <h3>01 // The Sartorial Altitude</h3>
           <span>[FASHION]</span>
         </div>
 
@@ -972,7 +1016,7 @@
         </div>
 
         <div class="section-bar">
-          <h2>02 // Architecture, Monoliths &amp; Canvas</h2>
+          <h3>02 // Architecture, Monoliths &amp; Canvas</h3>
           <span>[ART]</span>
         </div>
 
@@ -995,7 +1039,7 @@
         </div>
 
         <div class="section-bar">
-          <h2>03 // Khasi Cultural Heritage in Motion</h2>
+          <h3>03 // Khasi Cultural Heritage in Motion</h3>
           <span>[VIDEO]</span>
         </div>
 
@@ -1012,7 +1056,7 @@
         </div>
 
         <div class="section-bar">
-          <h2>04 // Synthesis: The Living Gallery</h2>
+          <h3>04 // Synthesis: The Living Gallery</h3>
           <span>[CONCLUSION]</span>
         </div>
 
@@ -1045,7 +1089,7 @@
     <span>✧</span> start
   </div>
   <div class="xp-taskbar-center">
-    MATTHEW S DKHAR SAWIAN // 24BJMC20
+    MATTHEW S DKHAR SAWIAN // 24BJMC20 // KRISTU JAYANTI
   </div>
   <div class="xp-tray">
     XP // 2026
